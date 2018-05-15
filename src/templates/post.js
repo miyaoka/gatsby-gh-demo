@@ -13,7 +13,6 @@ export default ({ pageContext }) => {
         <h1>
           [{node.number}] {node.title}
         </h1>
-        <ReactMarkdown source={node.body} />
 
         {previous && (
           <div>
@@ -25,6 +24,8 @@ export default ({ pageContext }) => {
             next: <Link to={`/posts/${next.number}`}>{next.title}</Link>
           </div>
         )}
+
+        <ReactMarkdown source={node.body} />
       </div>
     </Layout>
   )
