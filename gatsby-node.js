@@ -101,12 +101,12 @@ exports.createPages = async ({ graphql, actions }) => {
       allGitHubIssueField(sort: { fields: [number], order: DESC }) {
         edges {
           previous {
-            id
             title
+            number
           }
           next {
-            id
             title
+            number
           }
           node {
             id
@@ -124,7 +124,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   return data.allGitHubIssueField.edges.forEach(({ node, next, previous }) => {
     createPage({
-      path: `posts/${node.id}`,
+      path: `posts/${node.number}`,
       component: postComponent,
       context: { node, next, previous }
     })

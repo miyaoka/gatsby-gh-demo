@@ -17,12 +17,12 @@ export default ({ pageContext }) => {
 
         {previous && (
           <div>
-            prev: <Link to={`/posts/${previous.id}`}>{previous.title}</Link>
+            prev: <Link to={`/posts/${previous.number}`}>{previous.title}</Link>
           </div>
         )}
         {next && (
           <div>
-            next: <Link to={`/posts/${next.id}`}>{next.title}</Link>
+            next: <Link to={`/posts/${next.number}`}>{next.title}</Link>
           </div>
         )}
       </div>

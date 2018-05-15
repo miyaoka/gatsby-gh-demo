@@ -9,7 +9,7 @@ export default ({ data: { allGitHubIssueField: posts } }) => {
         <h4>total: {posts.totalCount} Posts</h4>
         {posts.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={`posts/${node.id}`}>
+            <Link to={`posts/${node.number}`}>
               <h3>
                 [{node.number}] {node.title}
               </h3>
